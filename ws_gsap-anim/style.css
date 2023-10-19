@@ -1,0 +1,67 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+.cursor {
+    position: fixed;
+    background-color: blue;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: -7.5px 0 0 -7.5px;
+    user-select: none;
+    pointer-events: none; /* クリック、ホバーとか、DOM要素の持つイベントを発生させません。*/
+    z-index: 5;
+}
+
+.circles {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #a6ddcb;
+    overflow: hidden;
+}
+.circle { /* circle達の共通のcssですね。*/
+    position: absolute;
+    border-radius: 50%; /* 正方形にradius 50% かければ正方形になります。*/
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%); /* 要素達の中心を同じ座標にセットします。*/
+}
+.circle1 {
+    background-color: green;
+    width: 630px;
+    height: 630px;
+}
+.circle2 {
+    background-color: red;
+    width: 420px;
+    height: 420px;
+    z-index: 1;
+}
+.circle3 {
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    position: absolute; /* relativeなしのabsoluteは、windowを基準に位置が決まるよ。*/
+    top: 0; /* あぁ。absoluteかけないと浮かないのか。 */
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* 魔法のcssプロパティ。mix-blend-mode */
+    /* な。らしいけど、いまいち使用がわからないのだ。*/
+    mix-blend-mode: screen;
+    z-index: 4;
+}
+.content h1 {
+    font-size: 9rem;
+}

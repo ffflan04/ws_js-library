@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像ギャラリー</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Lightboxのcdnを適用させるために必要な手順は、-->
+    <!-- cdnjs, cdncss, cdnjquery をhtmlに全て記述します。-->
+    <h1>画像ギャラリー</h1>
+
+    <div class="gallery">
+        <a href="img/ws-1" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-1" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-2" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-2" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-3" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-3" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-4" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-4" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-5" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-5" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-6" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-6" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-7" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-7" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-8" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-8" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-9" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-9" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-10" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-10" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-11" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-11" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-12" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-12" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-13" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-13" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-14" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-14" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-15" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-15" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-16" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-16" alt="" >
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="img/ws-17" data-lightbox="cont01" data-title="the first">
+            <img src="img/ws-2" alt="" >
+        </a>
+    </div>
+
+    <!-- jqueryのCDNですね。(jqueryを先に読み込むようにして下さい)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <!-- LightboxのCDNですね。-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+</body>
+</html>

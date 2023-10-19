@@ -1,0 +1,73 @@
+
+/* 環境構築編 */
+
+create-react-app とは？
+最も簡単にReactの開発環境を構築できる。
+
+本来のReact環境構築には以下の設定が必要...
+・トランスパイラのBabel
+・バンドラーのWebpack
+
+SPA(シングルページアプリケーション)とは？
+非同期的に読み込みを行い、単一ページの中で複数の動作が可能にします。
+
+create-react-app に必要なもの。
+・Node.js = サーバーサイドのjavascript環境です。
+・npm = Node.jsで、使うパッケージマネージャー。
+・HomebrewとNodebrewを使ってインストールします。
+    Homebrew = MacOS用のパッケージマネージャー
+    Nodebrew = node.jsのバージョン管理ツール
+
+インストール手順
+1. Homebrewのインストール 
+2. nodebrewのインストール -> brew install nodebrew
+3. nodeのインストール -> nodebrew install-binary stable
+    失敗する時は、$ nodebrew setup で、ディレクトリを作成するか、
+    $ mkdir -p ~/.nodebrew/src で、手動で、インストール先のディレクトリを作ります。
+    インストールが終わったら、nodebrew use v20.7.0 と打って、
+    現在使用するnode.jsのバージョン指定します。
+4. nodeの環境パスを通す -> echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
+
+node -v 
+npm -v
+で要件を満たすバージョンがならばok
+
+
+
+ここからは、自分のプロジェクトフォルダに移動しましょう。
+
+npx コマンドを実行しましょう。
+npx というコマンドは、ネットワーク上にあるnpmのコマンドを実行するものです。
+create-react-app というコマンドがネットワーク上に用意されているので、
+npx create-react-app react-basic(任意のフォルダ名)
+ダウンロードには時間がかかります。
+
+環境の解説(ダウンロードされたフォルダの解説)
+・src
+開発用ファイルが格納される。
+Reactコンポーネントのjsxファイルなどはここに置く。
+・public
+静的ファイルが格納される
+htmlファイルや画像ファイルなど
+・build
+本番用ファイルが格納される
+Reactで作ったアプリをデプロイするときに使います。
+npm run build コマンドで生成される。
+
+
+基本的なコマンドの解説
+・npm start
+ローカルサーバーを起動してReactアプリを確認できる。
+(start-react-app で指定したプロジェクトフォルダに移動して実行してください。)
+・npm run build
+本番用ファイルを生成してbuildディレクトリに出力
+srcとpublicのファイルを１つにまとめる(バンドル)
+このコマンドを実行してできるフォルダをデプロイすることで、Reactのアプリケーションをデプロイしたことになる。
+・npm run eject
+Babel や、Webpack の設定を変えたいときに使う。
+このコマンドは、設定を理解するのが難しいのでおすすめしません。
+
+とりあえず、初めは、
+npm start
+npm run build
+を実行すればok

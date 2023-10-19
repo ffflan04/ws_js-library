@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#4c46a0, #b3b2c4); /* 背景色にグラデーションをかける凄い機能 */
+}
+section { /* このcssは多分なくても大丈夫ww */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* section の中身を全て中央に配置するために、flexを当てました。*/
+    padding: 80px 100px;
+    color: #fff;
+}
+section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* この一連の処理は、要素を中央に寄せただけ。違いは、flexアイテムを縦並びにするかどうか */
+}
+section .container .main-title {
+    font-size: 4rem;
+    margin-bottom: 50px;
+}
+section .container .content {
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .container .media-icons {
+    margin-top: 100px;
+}
+section .container .media-icons a {
+    color: white;
+    font-size: 2rem; /* やっぱり、文字のサイズは、みんな rem で指定するんだね。*/
+    margin-left: 50px;
+}
+section .container .content .image { /* imgをブロック要素として操作したかったから囲んだのかな？ */
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden; /* width, height からはみでた要素は隠す！ */
+}
+section .container .content .text-box {
+    width: 600px;
+    /* flexアイテムが、親要素を上回るという、例をみない事例が起こったため、こちらでサイズを調整しました */
+    /* ここら辺は、お手本が何がしたいのかわからないな。*/
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    max-width: 400px;
+    transform: translate(-80px, 50px);
+    backdrop-filter: blur(20px); /* 背景にぼかしを入れられます。*/
+    border-radius: 10px;
+    /*border-radius: 1px solid rgba(255,255,255,0.1); え？なにこれ？ */
+
+}
+section .container .content .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* object-fit とは置換要素をコンテナーにどうはめこむかを設定します。*/
+    border-radius: 10px;
+}
+section .container .content .text-box h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* section02 */
+
+.sec-02 .container .section-title {
+    font-size: 3rem;
+    margin-bottom: 80px;
+}
+.sec-02 .container .content .info {
+    width: 700px;
+    margin-left: 50px;
+}
+.sec-02 .container .content .info .info-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* section03 */
+
+.sec-03 {
+    margin-bottom: 100px;
+}
+.sec-03 .container .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+}
+.sec-03 .container .content .media-info {
+    width: 400px;
+    margin-left: 50px;
+}
+.sec-03 .container .content .media-info li {
+    list-style: none;
+    font-size: 1.4rem;
+}
+.sec-03 .container .content .media-info li:not(:last-child){ /* うーん。すげぇ。cssってnot演算子使えるんだ。*/
+    margin-bottom: 50px; /* つまり、li の最後だけ、margin 当ててないってこと。*/
+}
+.sec-03 .container .content .media-info li:nth-child(1),
+.sec-03 .container .content .media-info li:nth-child(5){
+    padding-left: 100px;
+}
+.sec-03 .container .content .media-info li:nth-child(2),
+.sec-03 .container .content .media-info li:nth-child(4){
+    padding-left: 50px;
+}
+.sec-03 .container .content .media-info li a {
+    color: white;
+    text-decoration: none;
+}

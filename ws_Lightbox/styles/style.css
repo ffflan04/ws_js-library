@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* 今回はLightboxという画像ギャラリーを簡単に実装できる、*/
+/* ライブラリを使っていきます。*/
+/* Lightboxライブラリを使うために、githubからzipファイルをダウンロード */
+/* するのが面倒くさいので、今回は、Lightboxのcdnを貼っつけて使っていきます。*/
+/* ちなみに、CDNというのは、Contents Delivery Network */
+/* つまり、ネットワークに繋がってないと、このライブラリ機能しません。*/
+/* ーーーーーーーーーーーーーーーーー
+ はい。Lightboxライブラリの使い方を解説します。
+ ライブラリを使用するために、
+ npm でダウンロード, githubからzipファイルをダウンロード, cdnを使う。
+ の３つがあります。
+ 今回は、cdnを記述して使用してきます。cdnは、全てhtmlに記述します。
+ Lightboxは、jQueryを使用するライブラリなので、jQueryのcdnも記述します。
+ 実際に、Lightboxの機能を使うには、htmlのタグ内に、
+ <a href="img/ws-2" data-lightbox="cont01" data-title="the first">
+ 上記のように記述するのが、最も基本的な使い方だと思われます。
+ ーーーーーーーーーーーーーーーーー */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e4a26c;
+}
+body h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin: 30px 0 50px; /* 上30px 左右0px 下50px */
+}
+body section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body section .gallery a img {
+  width: 380px;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover; /* これはimgタグで鉄板じゃね？ */
+  padding: 10px; /* paddingってwidthに加算されるんやな */
+  filter: grayscale(100%);
+  transition: all 0.5s;
+  border-radius: 10%;
+}
+body section .gallery a img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,409 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.hero strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  white-space: nowrap;
+  font-size: 120px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 10px 10px 10px #333;
+}
+.hero .hero-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.hero video {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  width: 100%;
+  padding: 0 15px;
+  background-color: rgba(172, 172, 172, 0.5);
+}
+.header .header-logo {
+  margin: 0;
+}
+.header .header-logo a {
+  display: block;
+  color: transparent;
+}
+.header .header-nav .header-navlist {
+  margin: 0;
+  display: flex;
+}
+.header .header-nav .header-navlist .header-navitem a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.25s;
+}
+.header .header-nav .header-navlist .header-navitem a:hover {
+  border-bottom: 2px solid #333;
+}
+
+.section {
+  padding: 30px 15px;
+}
+.section .section-headline {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.section .about {
+  display: flex;
+  margin: 0;
+}
+.section .about .about-caption {
+  padding-left: 15px;
+}
+.section .about .about-caption .about-headline {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.section.section-primary {
+  background: linear-gradient(to top, white, #a93838);
+}
+
+.section.section-secondary {
+  background-color: white;
+}
+.section.section-secondary .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.section.section-secondary .grid .grid-item {
+  list-style: none;
+}
+.section.section-secondary .grid .grid-item .feature {
+  text-align: center;
+  padding: 0 15px;
+}
+.section.section-secondary .grid .grid-item .feature .feature-headline {
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.section.section-secondary .grid .grid-item .feature .feature-img {
+  margin: 0 0 20px;
+}
+.section.section-secondary .grid .grid-item .feature .feature-description {
+  margin: 0;
+  text-align: left;
+}
+.section.section-secondary .grid-col-2 .grid-item {
+  width: 50%;
+}
+.section.section-secondary .grid-col-3 .grid-item {
+  width: 33%;
+}
+.section.section-secondary .grid-col-4 .grid-item {
+  width: 25%;
+}
+
+.section.section-tertiary {
+  background-color: white;
+}
+.section.section-tertiary .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.section.section-tertiary .grid .grid-item {
+  list-style: none;
+}
+.section.section-tertiary .grid .grid-item .card {
+  padding: 0 10px;
+}
+.section.section-tertiary .grid .grid-item .card .card-link {
+  position: relative;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.25s;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .card-label {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  background-color: #999;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .card-image {
+  width: 100%;
+  height: auto;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .card-info {
+  padding: 5px 10px;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .card-info .card-headline {
+  margin: 0;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .card-info .card-description {
+  margin: 0;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .avator {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .avator .avator-name {
+  font-weight: bold;
+  padding-left: 15px;
+}
+.section.section-tertiary .grid .grid-item .card .card-link .avator .avator-image {
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.section.section-tertiary .grid .grid-item .card .card-link:hover {
+  background-color: #eee;
+}
+.section.section-tertiary .section-button {
+  text-align: center;
+  margin-top: 40px;
+}
+.section.section-tertiary .section-button .button {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  background-color: #333;
+  text-align: center;
+  padding: 15px 60px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 #bbb;
+  transition: box-shadow 0.25s;
+}
+.section.section-tertiary .section-button .button:hover {
+  box-shadow: 0 0 0 #bbb;
+}
+.section.section-tertiary .grid-col-2 .grid-item {
+  width: 50%;
+}
+.section.section-tertiary .grid-col-3 .grid-item {
+  width: 33%;
+}
+.section.section-tertiary .grid-col-4 .grid-item {
+  width: 25%;
+}
+
+.section.section-secondary {
+  background-color: #e7e7e7;
+}
+.section.section-secondary .form .form-table {
+  margin: 0 auto;
+}
+.section.section-secondary .form .form-table tr th {
+  padding: 10px;
+  text-align: left;
+}
+.section.section-secondary .form .form-table tr td {
+  padding: 10px;
+}
+.section.section-secondary .form .form-table tr td .select {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 500px;
+  cursor: pointer;
+}
+.section.section-secondary .form .form-table tr td .input {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 500px;
+  cursor: pointer;
+}
+.section.section-secondary .form .form-table tr td .radio {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.section.section-secondary .form .form-table tr td .textarea {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 500px;
+  min-height: 100px;
+  cursor: pointer;
+}
+.section.section-secondary .form .form-table tr label {
+  cursor: pointer;
+}
+.section.section-secondary .form .form-button {
+  margin-top: 20px;
+  text-align: center;
+}
+.section.section-secondary .form .form-button .button {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  background-color: #333;
+  text-align: center;
+  padding: 15px 60px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 #bbb;
+  transition: box-shadow 0.25s;
+  background-color: #92d3ca;
+  border: 0;
+}
+.section.section-secondary .form .form-button .button:hover {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+.works {
+  margin: 40px 0;
+  padding: 20px;
+  text-align: center;
+}
+.works img {
+  margin: 0 15px;
+}
+
+.footer {
+  color: #fff;
+  background-color: #333;
+}
+.footer .footer-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 40px 15px;
+}
+.footer .footer-map iframe {
+  width: 60%;
+}
+.footer .footer-map .footer-mapinfo {
+  width: 40%;
+  padding: 15px;
+}
+.footer .footer-map .footer-mapinfo .footer-maplogo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.footer .footer-map .footer-mapinfo .footer-maplogo svg {
+  margin-right: 10px;
+  fill: transparent;
+}
+.footer .footer-map .footer-mapinfo .footer-mapaddress {
+  font-style: normal;
+}
+.footer .footer-map .footer-mapinfo .footer-mapaddress a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-line {
+  border-color: #444;
+}
+.footer .footer-copy {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .body-wrap {
+    overflow-x: hidden;
+  }
+  .body-wrap .hero {
+    overflow-x: hidden;
+  }
+  .body-wrap .hero strong {
+    font-size: 50px;
+  }
+  .body-wrap .header {
+    padding: 0;
+  }
+  .body-wrap .section.section-primary .about {
+    display: block;
+  }
+  .body-wrap .section.section-primary .about .about-image {
+    width: 200px;
+    height: auto;
+  }
+  .body-wrap .section.section-secondary .grid {
+    display: block;
+  }
+  .body-wrap .section.section-secondary .grid .grid-item {
+    width: 100%;
+  }
+  .body-wrap .section.section-tertiary .grid {
+    display: block;
+  }
+  .body-wrap .section.section-tertiary .grid .grid-item {
+    width: 100%;
+  }
+  .body-wrap .section.section-secondary .select, .body-wrap .section.section-secondary .input, .body-wrap .section.section-secondary .radio, .body-wrap .section.section-secondary .textarea {
+    min-width: 170px !important;
+  }
+  .body-wrap .section.section-secondary .textarea {
+    max-height: 50px !important;
+  }
+  .body-wrap .works {
+    text-align: start;
+  }
+  .body-wrap .works img {
+    margin-top: 10px;
+  }
+  .body-wrap .footer .footer-map {
+    justify-content: flex-start;
+  }
+  .body-wrap .footer .footer-map iframe {
+    width: 45%;
+    height: auto;
+  }
+  .body-wrap .footer .footer-map .footer-mapinfo {
+    white-space: nowrap;
+  }
+  .body-wrap .footer .footer-map .footer-mapinfo .footer-maplogo {
+    font-size: 11px;
+  }
+  .body-wrap .footer .footer-map .footer-mapinfo .footer-mapaddress {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
